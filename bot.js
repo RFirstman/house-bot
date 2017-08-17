@@ -24,7 +24,7 @@ var makes = {
     "focus": "Michael Stagnaro",
     "maxima": "Robert Berman",
     "miata": "Jack Walz",
-    "mazda 3": "Everett Johnson",
+    "mazda 3": ["Matt Fishman", "Everett Johnson"],
     "rogue": "Josh White",
     "tahoe": "Cameron Pepe",
     "v50": "Robert Edstrom"
@@ -54,8 +54,17 @@ function getOwner(message) {
 
     string.forEach(function(word) {
             if (makes.hasOwnProperty(word.toLowerCase())) {
+                var car = makes[make.toLowerCase()];
                 make = word;
-                name = makes[make.toLowerCase()];
+                name = "";
+
+                if (car instanceof Array) {
+                  car.forEach(function(str) {
+                    name += str + "\n";
+                  });
+                } else {
+                  name = car;
+                }
             }
             if (brands.hasOwnProperty(word.toLowerCase())) {
                 brand = word;
@@ -65,7 +74,7 @@ function getOwner(message) {
     console.log(name + "--" + brand);
 
     if (typeof name != 'undefined') {
-        return "@" + name;
+        return name;
     } else if (typeof brand != 'undefined') {
         var owners = "";
         brands[brand.toLowerCase()].forEach(function(make) {
