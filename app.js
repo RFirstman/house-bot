@@ -7,7 +7,7 @@ var express = require("express"),
 app.use(bodyParser.json());
 
 app.post("/post", function(req, res) {
-    if (req.body.name != "c9 test" && req.body.text.toLowerCase.indexOf("@whosecar") != -1) {
+    if (req.body.name != "c9 test" && req.body.text.indexOf("@whosecar") != -1) {
         bot.respond(req.body.text);
     }
 });
