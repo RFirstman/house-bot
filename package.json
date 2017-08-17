@@ -1,0 +1,16 @@
+{
+  "name": "whose-car-bot",
+  "version": "1.0.0",
+  "description": "Bot for SAE House GroupMe to state the name of whoever's car is mentioned",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Firstman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "curlrequest": "^1.0.1",
+    "express": "^4.15.4"
+  }
+}
