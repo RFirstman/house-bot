@@ -78,7 +78,7 @@ function getOwner(message) {
     } else if (typeof brand != 'undefined') {
         var owners = "";
         brands[brand.toLowerCase()].forEach(function(make) {
-            if (makes[make] instanceof Array) {
+            if (makes[make.toLowerCase()] instanceof Array) {
               makes[make].forEach(function(str){
                 owners += str + "\n";
               });
