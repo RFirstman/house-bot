@@ -32,6 +32,7 @@ var makes = {
 
 module.exports = {
     respond: function (message) {
+        console.log("whosecar request: \'" + message + "\'");
         var name = getOwner(message);
 
         var options = {
@@ -54,7 +55,7 @@ function getOwner(message) {
 
     string.forEach(function(word) {
             if (makes.hasOwnProperty(word.toLowerCase())) {
-                var car = makes[make.toLowerCase()];
+                var car = makes[word.toLowerCase()];
                 make = word;
                 name = "";
 
