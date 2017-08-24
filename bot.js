@@ -33,7 +33,7 @@ var makes = {
 
 module.exports = {
     respond: function (message) {
-        var response = processMessage(message);
+        var response = processMessage(message.toLowerCase());
 
         var options = {
             method: 'POST',
@@ -62,26 +62,26 @@ function processMessage(message) {
             return response + getOwner(message);
         }
     } else if (message.indexOf("@insult") != -1) {
-        var insult = insultCompliment.Insult();
         if (message.length - 6 <= 1) {
-            return insult;
+            return insultCompliment.Insult();
         } else {
-            return message.split(7, message.length) + ": " + insult;
+            return message.split(7, message.length) + ": " + insultCompliment.Insult();
         }
     } else if (message.indexOf("@compliment") != -1) {
-        var compliment = insultCompliment.Compliment();
         if (message.length - 10 <= 1) {
-            return compliment;
+            return insultCompliment.Compliment();
         } else {
-            return message.split(11, message.length) + ": " + compliment;
+            return message.split(11, message.length) + ": " + insultCompliment.Compliment();
         }
+    } else if (message.indexOf("pebs") != -1) {
+        return "Pebs? heck ya dood lets get stoney baloney";
     }
 }
 
 // Determines proper owner or owners of a car make/brand. If the relevant make
 // or brand do not exist in the back lot, return a "BOOT" message.
 function getOwner(message) {
-    var string = message.toLowerCase().split(" ");
+    var string = message.split(" ");
     var name, brand, make;
 
     // Parses through string and sets relevant variables
