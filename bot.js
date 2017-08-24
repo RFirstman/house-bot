@@ -37,7 +37,7 @@ module.exports = {
         var options = {
             method: 'POST',
             url: "https://api.groupme.com/v3/bots/post",
-            data: { "text" : response, "bot_id" : "d50e3c892be84994c7635a8d7b" }
+            data: { "text" : response, "bot_id" : "4985f806e5462413b4cd75b06e" }
         }
 
         curl.request(options, function(error, response) {
@@ -52,7 +52,7 @@ module.exports = {
 // proper response
 function processMessage(message) {
     var tag = "@whosecar";
-    var response = "WHOSECAR:\n"
+    var response = "WHOSECAR:\n\n"
     if (message.length - tag.length <= 1) {
         return response + "Include a car brand or make!"
     } else {
