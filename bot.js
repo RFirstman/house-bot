@@ -38,7 +38,7 @@ module.exports = {
         var options = {
             method: 'POST',
             url: "https://api.groupme.com/v3/bots/post",
-            data: { "text" : name, "bot_id" : "4985f806e5462413b4cd75b06e" }
+            data: { "text" : name, "bot_id" : "d50e3c892be84994c7635a8d7b" }
         }
 
         curl.request(options, function(error, response) {
