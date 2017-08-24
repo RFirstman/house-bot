@@ -12,6 +12,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "curlrequest": "^1.0.1",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "insult-compliment": "^1.1.3"
   }
 }

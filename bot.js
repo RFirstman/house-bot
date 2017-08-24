@@ -1,4 +1,5 @@
 var curl = require("curlrequest");
+const InsultCompliment = require("insult-compliment");
 
 var brands = {
     "bmw": ["3 series"],
@@ -51,14 +52,29 @@ module.exports = {
 // Checks if @whosecar tag is in message. If so, calls getOwner and returns
 // proper response
 function processMessage(message) {
-    var tag = "@whosecar";
-    var response = "WHOSECAR:\n\n"
-    if (message.length - tag.length <= 1) {
-        return response + "Include a car brand or make!"
-    } else if (message.indexOf("josh") != -1) {
-        return "fuck you josh";
-    } else {
-        return response + getOwner(message);
+    if (message.indexOf("@whosecar") != -1) {
+        var response = "WHOSECAR:\n\n"
+        if (message.length - 9 <= 1) {
+            return response + "Include a car brand or make!"
+        } else if (message.indexOf("josh") != -1) {
+            return "fuck you josh";
+        } else {
+            return response + getOwner(message);
+        }
+    } else if (message.indexOf("@insult") != -1) {
+        var insult = InsultCompliment.Insult();
+        if (message.length - 6 <= 1) {
+            return insult;
+        } else {
+            return message.split(7, message.length) + ": " + insult;
+        }
+    } else if (message.indexOf("@compliment") != -1) {
+        var compliment = InsultCompliment.Compliment();
+        if (message.length - 10 <= 1) {
+            return compliment;
+        } else {
+            return message.split(11, message.length) + ": " + compliment;
+        }
     }
 }
 
