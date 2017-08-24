@@ -52,12 +52,10 @@ module.exports = {
 // proper response
 function processMessage(message) {
     var tag = "@whosecar";
-    if (req.body.text.indexOf(tag) != -1) {
-        if (message.length - tag.length <= 1) {
-            return "WHOSECAR: Include a car brand or make!"
-        } else {
-            return getOwner(message);
-        }
+    if (message.length - tag.length <= 1) {
+        return "WHOSECAR: Include a car brand or make!"
+    } else {
+        return getOwner(message);
     }
 }
 
