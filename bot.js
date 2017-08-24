@@ -32,8 +32,7 @@ var makes = {
 
 module.exports = {
     respond: function (message) {
-        console.log("whosecar request: \'" + message + "\'");
-        var name = getOwner(message);
+        var response = processMessage(message);
 
         var options = {
             method: 'POST',
@@ -49,35 +48,56 @@ module.exports = {
     }
 }
 
+// Checks if @whosecar tag is in message. If so, calls getOwner and returns
+// proper response
+function processMessage(message) {
+    var tag = "@whosecar";
+    if (req.body.text.indexOf(tag) != -1) {
+        if (message.length - tag.length <= 1) {
+            return "WHOSECAR: Include a car brand or make!"
+        } else {
+            return getOwner(message);
+        }
+    }
+}
+
+// Determines proper owner or owners of a car make/brand. If the relevant make
+// or brand do not exist in the back lot, return a "BOOT" message.
 function getOwner(message) {
     var string = message.toLowerCase().split(" ");
     var name, brand, make;
 
+    // Parses through string and sets relevant variables
     string.forEach(function(word) {
+            // If the word matches a make of car that exists in the back lot,
+            // Set the relevant variable. If there are multiple owners of the
+            // same make of car, make a list of owners
             if (makes.hasOwnProperty(word)) {
-                var car = makes[word];
+                var owner = makes[word];
                 make = word;
                 name = "";
 
-                if (car instanceof Array) {
-                  car.forEach(function(str) {
+                if (owner instanceof Array) {
+                  owner.forEach(function(str) {
                     name += str + "\n";
                   });
                 } else {
-                  name = car;
+                  name = owner;
                 }
             }
+
+            // If the word matches a brand of car that exists in the back lot,
+            // set the relevant variable to it
             if (brands.hasOwnProperty(word)) {
                 brand = word;
             }
-        });
-
-    console.log(name + "--" + brand);
+    });
 
     if (typeof name != 'undefined') {
         return name;
     } else if (typeof brand != 'undefined') {
         var owners = "";
+
         brands[brand].forEach(function(make) {
             if (makes[make] instanceof Array) {
               makes[make].forEach(function(str){
