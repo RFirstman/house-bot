@@ -2,8 +2,7 @@ var express = require("express"),
     app = express(),
     curl = require("curlrequest"),
     bodyParser = require("body-parser"),
-    bot = require("./bot.js"),
-    insultCompliment = require("insult-compliment");
+    bot = require("./bot.js");
 
 app.use(bodyParser.json());
 
