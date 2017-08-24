@@ -3,6 +3,7 @@ var express = require("express"),
     curl = require("curlrequest"),
     bodyParser = require("body-parser"),
     bot = require("./bot.js");
+const InsultCompliment = require("insult-compliment");
 
 app.use(bodyParser.json());
 
