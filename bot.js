@@ -50,12 +50,12 @@ module.exports = {
 }
 
 function getOwner(message) {
-    var string = message.split(" ");
+    var string = message.toLowerCase().split(" ");
     var name, brand, make;
 
     string.forEach(function(word) {
-            if (makes.hasOwnProperty(word.toLowerCase())) {
-                var car = makes[word.toLowerCase()];
+            if (makes.hasOwnProperty(word)) {
+                var car = makes[word];
                 make = word;
                 name = "";
 
@@ -67,7 +67,7 @@ function getOwner(message) {
                   name = car;
                 }
             }
-            if (brands.hasOwnProperty(word.toLowerCase())) {
+            if (brands.hasOwnProperty(word)) {
                 brand = word;
             }
         });
@@ -78,8 +78,8 @@ function getOwner(message) {
         return name;
     } else if (typeof brand != 'undefined') {
         var owners = "";
-        brands[brand.toLowerCase()].forEach(function(make) {
-            if (makes[make.toLowerCase()] instanceof Array) {
+        brands[brand].forEach(function(make) {
+            if (makes[make] instanceof Array) {
               makes[make].forEach(function(str){
                 owners += str + "\n";
               });
