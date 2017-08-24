@@ -1,5 +1,5 @@
 var curl = require("curlrequest");
-const InsultCompliment = require("insult-compliment");
+var insultCompliment = require("insult-compliment");
 
 var brands = {
     "bmw": ["3 series"],
@@ -62,14 +62,14 @@ function processMessage(message) {
             return response + getOwner(message);
         }
     } else if (message.indexOf("@insult") != -1) {
-        var insult = InsultCompliment.Insult();
+        var insult = insultCompliment.Insult();
         if (message.length - 6 <= 1) {
             return insult;
         } else {
             return message.split(7, message.length) + ": " + insult;
         }
     } else if (message.indexOf("@compliment") != -1) {
-        var compliment = InsultCompliment.Compliment();
+        var compliment = insultCompliment.Compliment();
         if (message.length - 10 <= 1) {
             return compliment;
         } else {
