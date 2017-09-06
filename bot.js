@@ -55,8 +55,6 @@ function processMessage(message) {
         var response = "WHOSECAR:\n\n"
         if (message.length - 9 <= 1) {
             return response + "Include a car brand or make!"
-        } else if (message.indexOf("josh") != -1) {
-            return "fuck you josh";
         } else {
             return response + getOwner(message);
         }
