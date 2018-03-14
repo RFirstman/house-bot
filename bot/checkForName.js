@@ -1,6 +1,6 @@
 module.exports = (message) => {
     response = "";
-    if (message.match(/bot/i) && message.match(/bot/i).length > 1) {
+    if (message.match(/bot/i) && message.match(/bot/g).length > 1) {
         response += "\nbeep boop I'm a low effort meme dump";
     }
     if (message.match(/walz/i)) {
