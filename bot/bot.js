@@ -36,7 +36,7 @@ function processMessage(message) {
         if (message.match(/everett/i)) {
             return "TRIGGERED";
         }
-        if (message.match("/clint/i")) {
+        if (message.match(/clint/i)) {
             return "Oh no!! Clint's blocking the back lot again? Whatever can we do?";
         }
         if (message.length - 9 <= 1) {
