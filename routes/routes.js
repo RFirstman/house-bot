@@ -1,5 +1,5 @@
 // Express routes file
-
+const bot = require("../bot/bot");
 module.exports = app => {
 	app.post("/", function(req, res) {
 	    if (req.body.name != "c9 test" && req.body.text.includes("@whosecar")) {
