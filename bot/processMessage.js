@@ -32,7 +32,8 @@ module.exports = (message) => {
     }
     if (message.match(/berman/i)){
         response += "\nLet's go!";
-    } else if (message.match(/rob/i) || message.match(/firstman/i)) {
+    } 
+    if (message.match(/rob/i) || message.match(/firstman/i)) {
         response += "\nRob Firstman? More like Rob WORSTman";
     }
 
