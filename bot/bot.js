@@ -27,16 +27,16 @@ module.exports = {
 function processMessage(message) {
     if (message.includes("@whosecar")) {
         var response = generateGreeting() + "\nWhose Car:\n";
-        if (message.includes(/walz/i)) {
+        if (message.match(/walz/i)) {
             return "BEEP BOOP FUCK WALZ";
         }
-        if (message.includes(/josh/i)) {
+        if (message.match(/josh/i)) {
             return "Josh is a turd wrangler";
         }
-        if (message.includes(/everett/i)) {
+        if (message.match(/everett/i)) {
             return "TRIGGERED";
         }
-        if (message.includes("/clint/i")) {
+        if (message.match("/clint/i")) {
             return "Oh no!! Clint's blocking the back lot again? Whatever can we do?";
         }
         if (message.length - 9 <= 1) {
