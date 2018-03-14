@@ -27,6 +27,8 @@ export const processMessage = (message) => {
     if (message.match(/perri/i)) {
         response += "\nEyyy, I'm walkin' here!";
     }
+
+    return response;
 }
 
 
