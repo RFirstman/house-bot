@@ -1,4 +1,5 @@
 const generateGreeting = require("./generateGreeting");
+const { brands, makes } = require("../data/cars");
 
 module.exports = (message) => {
     var response = generateGreeting();

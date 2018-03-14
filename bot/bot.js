@@ -1,6 +1,5 @@
 var curl = require("curlrequest");
 
-const { brands, makes } = require("../data/cars");
 const processMessage = require("./processMessage");
 
 module.exports = {
