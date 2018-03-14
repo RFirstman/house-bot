@@ -1,4 +1,6 @@
-export const processMessage = (message) => {
+const generateGreeting = require("./generateGreeting");
+
+module.exports = (message) => {
     var response = generateGreeting();
     if (message.includes("whosecar")) {
         response += "\nWhose Car:\n";
