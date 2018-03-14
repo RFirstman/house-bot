@@ -1,5 +1,6 @@
 const generateGreeting = require("./generateGreeting");
 const { brands, makes } = require("../data/cars");
+const checkForName = require("./checkForName");
 
 module.exports = (message) => {
     var response = generateGreeting();
@@ -14,29 +15,7 @@ module.exports = (message) => {
             response += getOwner(message);
         }
     }
-
-    if (message.match(/walz/i)) {
-        response += "\nBEEP BOOP FUCK WALZ";
-    }
-    if (message.match(/josh/i)) {
-        response += "\nJosh is a turd wrangler";
-    }
-    if (message.match(/everett/i)) {
-        response += "\nTRIGGERED";
-    }
-    if (message.match(/clint/i)) {
-        response += "\nOh no!! Clint's blocking the back lot again? Whatever can we do?";
-    }
-    if (message.match(/perri/i)) {
-        response += "\nEyyy, I'm walkin' here!";
-    }
-    if (message.match(/berman/i)){
-        response += "\nLet's go!";
-    } 
-    if (message.match(/rob/i) || message.match(/firstman/i)) {
-        response += "\nRob Firstman? More like Rob WORSTman";
-    }
-
+    response += checkForName(message);
     return response;
 }
 
