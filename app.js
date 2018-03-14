@@ -4,9 +4,9 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     bot = require("./bot/bot");
 
-require("./routes/routes")(app);
-
 app.use(bodyParser.json());
+
+require("./routes/routes")(app);
 
 port = process.env.PORT || 3000;
 

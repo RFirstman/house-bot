@@ -10,8 +10,8 @@ module.exports = {
         var options = {
             method: "POST",
             url: "https://api.groupme.com/v3/bots/post",
-            //data: { text: response, bot_id: "4985f806e5462413b4cd75b06e" }
-            data: { text: response, bot_id: "469361e7f4e353c11f4e4ce7c9" }
+            data: { text: response, bot_id: "4985f806e5462413b4cd75b06e" }
+            // data: { text: response, bot_id: "469361e7f4e353c11f4e4ce7c9" } for test groupme
         };
 
         curl.request(options, function(error, response) {
@@ -25,8 +25,8 @@ module.exports = {
 // Checks if @whosecar tag is in message. If so, calls getOwner and returns
 // proper response
 function processMessage(message) {
-    if (message.inclues("@whosecar")) {
-        var response = generateGreeting() + "\n\n";
+    if (message.includes("@whosecar")) {
+        var response = generateGreeting() + "\nWhose Car:\n";
         if (message.length - 9 <= 1) {
             return response + "Include a car brand or make!";
         } else {
@@ -68,7 +68,7 @@ function getOwner(message) {
     });
 
     if (typeof name != "undefined") {
-        return name;
+        return "Owner of a " + make + ": " + name;
     } else if (typeof brand != "undefined") {
         var owners = "";
 
