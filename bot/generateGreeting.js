@@ -4,7 +4,8 @@ const greetings = [
 	"HOUSE BOT",
 	"It's your favorite groupme bot: House Bot!",
 	"*sweats* h-hi it's h-house bot uWu",
-	"beep boop. it is I. HOUSE BOT."
+	"beep boop. it is I. HOUSE BOT.",
+	"YOU DARE DISTURB HOUSE BOT?"
 ];
 
 module.exports = () => {
