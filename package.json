@@ -14,6 +14,7 @@
     "curlrequest": "^1.0.1",
     "express": "^4.15.4",
     "firebase": "^4.11.0",
-    "insult-compliment": "^1.1.3"
+    "insult-compliment": "^1.1.3",
+    "weather-js": "^2.0.0"
   }
 }

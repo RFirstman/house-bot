@@ -1,9 +1,10 @@
 const generateGreeting = require("./generateGreeting");
 const { brands, makes } = require("../data/cars");
 const checkForName = require("./checkForName");
+const getWeather = require("./weather");
 
-module.exports = (message) => {
-    var response = generateGreeting();
+module.exports = async (message) => {
+    let response = generateGreeting();
     if (message.includes("whosecar")) {
         response += "\nWhose Car:\n";
         let args = message.substr(message.indexOf("whosecar") + "whosecar".length);
@@ -13,6 +14,13 @@ module.exports = (message) => {
             response += "Include a car brand or make!";
         } else {
             response += getOwner(message);
+        }
+    }
+    if (message.includes("weather")) {
+        try {
+            response += await getWeather();
+        } catch (err) {
+            console.log(err);
         }
     }
     response += checkForName(message);
