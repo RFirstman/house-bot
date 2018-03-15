@@ -11,5 +11,5 @@ require("./routes/routes")(app);
 port = process.env.PORT || 3000;
 
 app.listen(port, function() {
-    console.log("Server running!");
+    console.log("Server running on port " + port);
 });

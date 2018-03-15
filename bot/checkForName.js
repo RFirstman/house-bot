@@ -39,6 +39,9 @@ module.exports = (message) => {
     if (message.match(/peyton/i)) {
         response += "\nWatch out for the Ankle Breaker!";
     }
+    if (message.match(/burke/g)) {
+        response += "\nYOU KNOW, HOUSE BOT CAN RELATE TO ROBOT MAN BURKE"
+    }
 
     return response;
 }

@@ -4,8 +4,8 @@ const processMessage = require("./processMessage");
 const { bot_id } = require("../config/config");
 
 module.exports = {
-    respond: function(message) {
-        var response = processMessage(message.toLowerCase());
+    respond: async (message) => {
+        const response = await processMessage(message.toLowerCase());
 
         var options = {
             method: "POST",
