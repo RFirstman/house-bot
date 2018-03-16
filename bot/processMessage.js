@@ -2,6 +2,7 @@ const generateGreeting = require("./generateGreeting");
 const { brands, makes } = require("../data/cars");
 const checkForName = require("./checkForName");
 const getWeather = require("./weather");
+const menu = require("./menu");
 
 module.exports = async (message) => {
     let response = generateGreeting();
@@ -22,6 +23,9 @@ module.exports = async (message) => {
         } catch (err) {
             console.log(err);
         }
+    }
+    if (message.includes("menu")) {
+        response += menu();
     }
     response += checkForName(message);
     return response;
