@@ -18,7 +18,7 @@ module.exports = (message) => {
     if (message.match(/perri/i)) {
         response += "\nEyyy, I'm walkin' here!";
     }
-    if (message.match(/berman/i)){
+    if (message.match(/berm|berman/i)){
         response += "\nLet's go!";
     } 
     if (message.match(/rob/i) || message.match(/firstman/i)) {
@@ -39,8 +39,11 @@ module.exports = (message) => {
     if (message.match(/peyton/i)) {
         response += "\nWatch out for the Ankle Breaker!";
     }
-    if (message.match(/burke/g)) {
-        response += "\nYOU KNOW, HOUSE BOT CAN RELATE TO ROBOT MAN BURKE"
+    if (message.match(/burke/i)) {
+        response += "\nHOUSE BOT LIKE BURKE. BURKE IS FELLOW ROBOT.";
+    }
+    if (message.match(/erek/i)) {
+        response += "I would think Erek is a serial killer if he didn't have polio.";
     }
 
     return response;
