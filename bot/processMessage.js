@@ -6,16 +6,17 @@ const menu = require("./menu");
 
 module.exports = async (message) => {
     let response = generateGreeting();
-    let args = message.substr(message.indexOf("@bot") + 4).split(" ");
+    let command = message.substr(message.indexOf("@bot") + 5);
+    let args = command.split(" ");
     if (args.includes("whosecar")) {
         response += "\nWhose Car:\n";
-        let args = message.substr(message.indexOf("whosecar") + "whosecar".length);
+        let car = command.substr(command.indexOf("whosecar") + "whosecar".length);
 
 
-        if (args.length == 0) {
+        if (car.length == 0) {
             response += "Include a car brand or make!";
         } else {
-            response += getOwner(message);
+            response += getOwner(command);
         }
     }
     if (args.includes("weather")) {
@@ -28,7 +29,7 @@ module.exports = async (message) => {
     if (args.includes("menu")) {
         response += menu(args);
     }
-    response += checkForName(message);
+    response += checkForName(command);
     return response;
 }
 
