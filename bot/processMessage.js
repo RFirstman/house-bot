@@ -30,6 +30,7 @@ module.exports = async (message) => {
         response += menu(args);
     }
     response += checkForName(command);
+    response = response.replace("tenders", "tendies"); // just because
     return response;
 }
 
