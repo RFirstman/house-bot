@@ -5,16 +5,21 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "menu": "echo \"Making menu...\" && node services/makeMenu.js"
   },
   "author": "Robert Firstman",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
     "curlrequest": "^1.0.1",
+    "docxtemplater": "^3.5.1",
     "express": "^4.15.4",
     "firebase": "^4.11.0",
     "insult-compliment": "^1.1.3",
+    "jszip": "^3.1.5",
+    "jszip-utils": "0.0.2",
+    "mammoth": "^1.4.4",
     "weather-js": "^2.0.0"
   }
 }
