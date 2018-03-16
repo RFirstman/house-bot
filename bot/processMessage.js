@@ -6,7 +6,8 @@ const menu = require("./menu");
 
 module.exports = async (message) => {
     let response = generateGreeting();
-    if (message.includes("whosecar")) {
+    let args = message.substr(message.indexOf("@bot") + 4).split(" ");
+    if (args.includes("whosecar")) {
         response += "\nWhose Car:\n";
         let args = message.substr(message.indexOf("whosecar") + "whosecar".length);
 
@@ -17,15 +18,15 @@ module.exports = async (message) => {
             response += getOwner(message);
         }
     }
-    if (message.includes("weather")) {
+    if (args.includes("weather")) {
         try {
             response += await getWeather();
         } catch (err) {
             console.log(err);
         }
     }
-    if (message.includes("menu")) {
-        response += menu();
+    if (args.includes("menu")) {
+        response += menu(args);
     }
     response += checkForName(message);
     return response;
