@@ -1,3 +1,5 @@
+var emoji = require("node-emoji");
+
 module.exports = (message) => {
     response = "";
     if (message.match(/bot/i) && message.match(/bot/g).length > 1) {
@@ -44,6 +46,9 @@ module.exports = (message) => {
     }
     if (message.match(/erek/i)) {
         response += "I would think Erek is a serial killer if he didn't have polio.";
+    }
+    if (message.match(/andrew/i)) {
+        response += "\nTHICC " + emoji.get("triumph") + emoji.get("sweat_drops") + emoji.get("weary");
     }
 
     return response;
