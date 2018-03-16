@@ -3,11 +3,15 @@ const { brands, makes } = require("../data/cars");
 const checkForName = require("./checkForName");
 const getWeather = require("./weather");
 const menu = require("./menu");
+const help = require("./help");
 
 module.exports = async (message) => {
     let response = generateGreeting();
     let command = message.substr(message.indexOf("@bot") + 5);
     let args = command.split(" ");
+    if (args.includes("help")) {
+        return help();
+    }
     if (args.includes("whosecar")) {
         response += "\nWhose Car:\n";
         let car = command.substr(command.indexOf("whosecar") + "whosecar".length);
