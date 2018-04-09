@@ -26,7 +26,7 @@ module.exports = (message) => {
     if (message.match(/rob/i) || message.match(/firstman/i)) {
         response += "\nRob Firstman? More like Rob WORSTman";
     }
-    if (message.match(/Hannah|Emma|Lauren|Abigail|Natalie|Kaleigh/i)) {
+    if (message.match(/Hannah|Emma|Lauren|Abigail|Natalie|Kaleigh|Savannah|Rory/i)) {
         response += "\n*whip cracks*";
     }
     if (message.match(/pepe/i)) {
@@ -49,6 +49,9 @@ module.exports = (message) => {
     }
     if (message.match(/andrew/i)) {
         response += "\nTHICC " + emoji.get("triumph") + emoji.get("sweat_drops") + emoji.get("weary");
+    }
+    if (message.match(/Elon|Musk/i)) {
+        response += "\n*bishop quivers excitedly"
     }
 
     return response;
