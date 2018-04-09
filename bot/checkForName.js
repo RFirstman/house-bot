@@ -51,7 +51,7 @@ module.exports = (message) => {
         response += "\nTHICC " + emoji.get("triumph") + emoji.get("sweat_drops") + emoji.get("weary");
     }
     if (message.match(/Elon|Musk/i)) {
-        response += "\n*bishop quivers excitedly"
+        response += "\n*bishop quivers excitedly*"
     }
 
     return response;
