@@ -1,22 +1,22 @@
 {
     "Monday": {
-        "lunch": "Breakfast for lunch \nScrabbled egg, sausage, tots, cheese grits French toast with whipped cream and strawberries. \nFresh fruit \n",
-        "dinner": "Meatloaf with mashed potatoes, and sautéed green beans\nCesar salads Warm dinner rolls \n"
+        "lunch": "Flat bread pizzas + Chef salads \nFresh fruit \n",
+        "dinner": "Texas chili over yellow rice, warm corn bread\nCesar salads \n"
     },
     "Tuesday": {
-        "lunch": "Moe’s style chicken burritos with chips and queso, fresh guacamole \nFresh fruit \n",
-        "dinner": "Sheppards pie with green peas and carrots, creamy mashed potatoes \nChef salads + cheddar biscuits \n"
+        "lunch": "Enchiladas with rice and beans \nChips with queso, guac, cheese, sour cream \nFresh fruit  \n",
+        "dinner": "Pork fried rice with veggie egg rolls, sautéed vegetables \nGarden salads \n"
     },
     "Wednesday": {
-        "lunch": "Bacon pimento cheese sandwiches with chips and tomato soup\nFresh fruit \n",
-        "dinner": "Spaghetti marinara with Italian sausages and peppers\nGarlic knots & Cesar salads\nApple crumble \n"
+        "lunch": "Corn dogs with fries and rings \nFresh fruit  \n",
+        "dinner": "Pulled pork sammies with three cheese mac, baked beans, slaw \nSpinach salads \nApple turn overs \n"
     },
     "Thursday": {
-        "lunch": "Philly cheese steaks with fries \nFresh fruit \n",
-        "dinner": "Chicken low mein with stir fry and spring rolls \nGarden salads \n"
+        "lunch": "Chicky chicky parm parm sandwiches with curly fries \nFresh fruit \n",
+        "dinner": "Smoked jerk chicken with red beans and rice, sautéed vegtables\n"
     },
     "Friday": {
-        "lunch": "Buffalo tenders + fresh fruit  + fries + crudite \n",
+        "lunch": "Breakfast burritos + tots\nFresh fruit \n",
         "dinner": ""
     }
 }
