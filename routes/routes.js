@@ -3,6 +3,8 @@ const bot = require("../bot/bot");
 const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
+const mammoth = require("mammoth");
+const makeMenu = require("../services/makeMenu");
 
 const storage = multer.diskStorage({
 	destination: (req, file, callback) => {
@@ -32,8 +34,18 @@ module.exports = app => {
 			if (err) {
 				res.end("Error uploading file.");
 			}
-			require("../services/makeMenu");
+			makeMenu();
 			res.end("File uploaded successfully!");
 		});
+	});
+
+	app.get("/menu/current", async (req, res) => {
+		let buffer = fs.readFileSync(
+			path.resolve(__dirname, "..", "input.docx"),
+			"binary"
+		);
+
+		const text = (await mammoth.extractRawText({ buffer })).value;
+		res.send(text);
 	});
 }
