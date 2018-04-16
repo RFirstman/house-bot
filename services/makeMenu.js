@@ -13,7 +13,7 @@ const main = async () => {
 	const text = (await mammoth.extractRawText({ buffer })).value;
 	const lines = text.split("\n");
 
-	console.log(lines);
+	// console.log(lines);
 	let menu = {};
 	let i = 0;
 	while (i < lines.length) {

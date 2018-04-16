@@ -1,22 +1,22 @@
 {
     "Monday": {
-        "lunch": "Flat bread pizzas + Chef salads \nFresh fruit \n",
-        "dinner": "Texas chili over yellow rice, warm corn bread\nCesar salads \n"
+        "lunch": "Hot and spicy nuggets over fired rice and stir fry \nFresh fruit \n",
+        "dinner": "Grilled sliced pesto chicken with bow tie pasta salad and sautéed vegetables \nGarden salads \n"
     },
     "Tuesday": {
-        "lunch": "Enchiladas with rice and beans \nChips with queso, guac, cheese, sour cream \nFresh fruit  \n",
-        "dinner": "Pork fried rice with veggie egg rolls, sautéed vegetables \nGarden salads \n"
+        "lunch": "Burrito bowls: Mexican rice, beans, lettuce, tomatoes, diced onions, cilantro, sour cream, cheddar cheese. \nChips with guac, queso, pico de gallo \nFresh fruit \n",
+        "dinner": "Poppy seed chicken casseroles with yellow rice and cheddar cheese biscuits \nCesar salads \n"
     },
     "Wednesday": {
-        "lunch": "Corn dogs with fries and rings \nFresh fruit  \n",
-        "dinner": "Pulled pork sammies with three cheese mac, baked beans, slaw \nSpinach salads \nApple turn overs \n"
+        "lunch": "Hotdog bar: Chili, cheese, caramelized onions, fries, slaw \nFresh fruit \n",
+        "dinner": "Linguni al fredo with chicken and broccoli \nGarlic knots \nChef Salads \nTres Leches cakes \n"
     },
     "Thursday": {
-        "lunch": "Chicky chicky parm parm sandwiches with curly fries \nFresh fruit \n",
-        "dinner": "Smoked jerk chicken with red beans and rice, sautéed vegtables\n"
+        "lunch": "Wings three ways with dips and crudite \nFresh fruit \n",
+        "dinner": "Smoked BBQ chicken legs with corn on the cob, and sautéed green beans - Carrots, mushrooms, onions \nGarden salads \n"
     },
     "Friday": {
-        "lunch": "Breakfast burritos + tots\nFresh fruit \n",
+        "lunch": "Chicken tenders, buffalo mac and cheese, fresh veggies \nFresh fruit \n",
         "dinner": ""
     }
 }
