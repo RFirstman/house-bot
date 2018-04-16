@@ -4,7 +4,7 @@ var fs = require("fs");
 
 const daysRegex = /Monday|Tuesday|Wednesday|Thursday|Friday/i;
 
-const main = async () => {
+module.exports = async () => {
 	let buffer = fs.readFileSync(
 		path.resolve(__dirname, "..", "input.docx"),
 		"binary"
@@ -55,7 +55,8 @@ const main = async () => {
 		i++;
 	}
 
-	fs.writeFileSync(path.resolve(__dirname, "..", "data", "menu.json"), JSON.stringify(menu,null,4));
+	fs.writeFileSync(
+		path.resolve(__dirname, "..", "data", "menu.json"),
+		JSON.stringify(menu, null, 4)
+	);
 };
-
-main().catch(error => console.error(error));

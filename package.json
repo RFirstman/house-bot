@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "menu": "echo \"Making menu...\" && node services/makeMenu.js"
+    "menu": "echo \"Making menu...\" && node data/make.js"
   },
   "author": "Robert Firstman",
   "license": "ISC",
