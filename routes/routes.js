@@ -14,11 +14,11 @@ const upload = multer({dest: "../uploads"});
 module.exports = app => {
 	app.post("/", async (req, res) => {
 	    if (req.body.text.includes("@bot")) {
-	    	let bot_id = config.bot_id; 
-	    	if (req.body.group_id === "33027326") {
+	    	let bot_id = config.bot_id;
+	    	if (req.body.group_id && req.body.group_id === "33027326") {
 	    		bot_id = config.bot_id_old;
 	    	}
-	    	
+
 	        await bot.respond(req.body.text, bot_id);
 	    }
 	    res.sendStatus(200);
