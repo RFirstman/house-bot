@@ -9,7 +9,7 @@ const autoReap = require("multer-autoreap");
 const makeMenu = require("../services/makeMenu");
 const config = require("../config/config");
 
-const upload = multer({dest: "../uploads"});
+const upload = multer({dest: "./"});
 
 module.exports = app => {
 	app.post("/", async (req, res) => {
