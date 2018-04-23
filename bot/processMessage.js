@@ -31,7 +31,7 @@ module.exports = async (message) => {
         }
     }
     if (args.includes("menu")) {
-        response += menu(args);
+        response += await menu(args);
     }
     response += checkForName(command);
     response = response.replace("tenders", "tendies"); // just because

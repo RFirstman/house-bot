@@ -1,10 +1,9 @@
 var curl = require("curlrequest");
 
 const processMessage = require("./processMessage");
-const { bot_id } = require("../config/config");
 
 module.exports = {
-    respond: async (message) => {
+    respond: async (message, bot_id) => {
         const response = await processMessage(message.toLowerCase());
 
         var options = {

@@ -1,12 +1,13 @@
 var mammoth = require("mammoth");
 var path = require("path");
 var fs = require("fs");
+var mongoose = require("mongoose");
 
 const daysRegex = /Monday|Tuesday|Wednesday|Thursday|Friday/i;
 
-module.exports = async () => {
+module.exports = async (file) => {
 	let buffer = fs.readFileSync(
-		path.resolve(__dirname, "..", "input.docx"),
+		path.resolve(file.path),
 		"binary"
 	);
 
@@ -54,8 +55,6 @@ module.exports = async () => {
 		i++;
 	}
 
-	fs.writeFileSync(
-		path.resolve(__dirname, "..", "data", "menu.json"),
-		JSON.stringify(menu, null, 4)
-	);
+	const MenuModel = mongoose.model("menus");
+	await new MenuModel({ menu }).save();
 };
