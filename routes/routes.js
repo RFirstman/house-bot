@@ -4,24 +4,22 @@ const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const mammoth = require("mammoth");
+const mongoose = require("mongoose");
+const autoReap = require("multer-autoreap");
 const makeMenu = require("../services/makeMenu");
+const config = require("../config/config");
 
-const storage = multer.diskStorage({
-	destination: (req, file, callback) => {
-		callback(null, "./");
-	},
-	filename: (req, file, callback) => {
-		callback(null, "input.docx");
-	}
-});
-
-const upload = multer({ storage }).single("menu");
+const upload = multer({dest: "../uploads"});
 
 module.exports = app => {
 	app.post("/", async (req, res) => {
-		console.log(req);
 	    if (req.body.text.includes("@bot")) {
-	        await bot.respond(req.body.text);
+	    	let bot_id = config.bot_id; 
+	    	if (req.body.group_id === "33027326") {
+	    		bot_id = config.bot_id_old;
+	    	}
+	    	
+	        await bot.respond(req.body.text, bot_id);
 	    }
 	    res.sendStatus(200);
 	});
@@ -30,23 +28,18 @@ module.exports = app => {
 		res.sendFile(path.resolve(__dirname, "..", "views", 'menuUpload.html'));
 	});
 
-	app.post("/menu", (req, res) => {
-		upload(req, res, err => {
-			if (err) {
-				res.end("Error uploading file.");
-			}
-			makeMenu();
-			res.end("File uploaded successfully!");
-		});
+	app.post("/menu", upload.single("menu"), autoReap, async (req, res) => {
+		if (!req.file || req.file.mimetype != "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+			res.end("Invalid file! Please upload a .docx file.");
+		}
+
+		await makeMenu(req.file);
+		res.end("File uploaded successfully!");
 	});
 
 	app.get("/menu/current", async (req, res) => {
-		let buffer = fs.readFileSync(
-			path.resolve(__dirname, "..", "input.docx"),
-			"binary"
-		);
-
-		const text = (await mammoth.extractRawText({ buffer })).value;
-		res.send(text);
+		const MenuModel = mongoose.model("menus");
+		const { menu } = await MenuModel.findOne({}, {}, { sort: {dateUploaded: -1}});
+		res.send(JSON.stringify(menu));
 	});
 }
