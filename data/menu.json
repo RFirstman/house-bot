@@ -1,22 +1,22 @@
 {
     "Monday": {
-        "lunch": "Hot and spicy nuggets over fired rice and stir fry \nFresh fruit \n",
-        "dinner": "Grilled sliced pesto chicken with bow tie pasta salad and sautéed vegetables \nGarden salads \n"
+        "lunch": "Chicken cesar wraps with assorted chips \nFresh fruit \n",
+        "dinner": "Shepards pie with warm rolls \nArugula salads with candied pecans and cranberries, smoked Gouda \n"
     },
     "Tuesday": {
-        "lunch": "Burrito bowls: Mexican rice, beans, lettuce, tomatoes, diced onions, cilantro, sour cream, cheddar cheese. \nChips with guac, queso, pico de gallo \nFresh fruit \n",
-        "dinner": "Poppy seed chicken casseroles with yellow rice and cheddar cheese biscuits \nCesar salads \n"
+        "lunch": "Chipotle bowls with assorted toppings and fresh in house chips and dips \nFresh fruit \n",
+        "dinner": "Pork chops with baby carrots, sautéed veggies and mashed potatoes \nChef Salads\n"
     },
     "Wednesday": {
-        "lunch": "Hotdog bar: Chili, cheese, caramelized onions, fries, slaw \nFresh fruit \n",
-        "dinner": "Linguni al fredo with chicken and broccoli \nGarlic knots \nChef Salads \nTres Leches cakes \n"
+        "lunch": "Roast beef sammies with au jus, seasoned curly fires \nFresh fruit \n",
+        "dinner": "Roast salmon filets over wild rice and cheesy broccoli \nCesar salad, warm cookies\n"
     },
     "Thursday": {
-        "lunch": "Wings three ways with dips and crudite \nFresh fruit \n",
-        "dinner": "Smoked BBQ chicken legs with corn on the cob, and sautéed green beans - Carrots, mushrooms, onions \nGarden salads \n"
+        "lunch": "Baked spaghetti and meatballs with garlic knots \nGarden salads\nFresh fruit \n",
+        "dinner": "Sliced grilled chicken breast with 3 cheese MAC, and sautéed green beans \n"
     },
     "Friday": {
-        "lunch": "Chicken tenders, buffalo mac and cheese, fresh veggies \nFresh fruit \n",
+        "lunch": "Breakfast burritos with fresh pico de gallo, tots\nFresh fruit \n",
         "dinner": ""
     }
 }

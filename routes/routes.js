@@ -19,6 +19,7 @@ const upload = multer({ storage }).single("menu");
 
 module.exports = app => {
 	app.post("/", async (req, res) => {
+		console.log(req);
 	    if (req.body.text.includes("@bot")) {
 	        await bot.respond(req.body.text);
 	    }
