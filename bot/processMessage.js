@@ -4,6 +4,7 @@ const checkForName = require("./checkForName");
 const getWeather = require("./weather");
 const menu = require("./menu");
 const help = require("./help");
+const insult = require("./insult");
 
 module.exports = async (message) => {
     let response = generateGreeting();
@@ -32,6 +33,9 @@ module.exports = async (message) => {
     }
     if (args.includes("menu")) {
         response += await menu(args);
+    }
+    if (args.includes("insult")) {
+        response += insult(args);
     }
     response += checkForName(command);
     response = response.replace("tenders", "tendies"); // just because

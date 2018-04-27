@@ -1,5 +1,7 @@
 module.exports = () => {
 	return `Available commands:
+	  insult
+	    - add a name or names to direct the insult
 	  menu
 	    - get this week's menu 
 	    - add 'today' for today's menu
