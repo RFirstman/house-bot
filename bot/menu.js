@@ -11,7 +11,11 @@ const days = [
 
 module.exports = async args => {
 	const MenuModel = mongoose.model("menus");
-	const { menu } = await MenuModel.findOne({}, {}, { sort: {dateUploaded: -1}});
+	const { menu } = await MenuModel.findOne(
+		{},
+		{},
+		{ sort: { dateUploaded: -1 } }
+	);
 	if (args.includes("today")) {
 		let n = new Date().getDay();
 		if (n == 0 || n == 6) {
