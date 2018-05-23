@@ -12,7 +12,7 @@ module.exports = {
     },
     makes: {
         "3 series": ["Chris Torie"],
-        "4runner": ["Isaac Weeks"],
+        "4runner": ["Isaac Weeks", "Joe King"],
         "accord": ["Will Freeman"],
         "camry": ["Rob Firstman"],
         "corolla": ["Cameron Bennett"],

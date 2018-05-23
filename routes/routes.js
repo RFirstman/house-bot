@@ -14,6 +14,7 @@ const upload = multer({dest: "./"});
 module.exports = app => {
 	app.post("/", async (req, res) => {
 		let groupBotMap = config.bot_ids;
+		console.log(config.bot_ids)
 
 		if (groupBotMap.hasOwnProperty(req.body.group_id)) {
 			let bot_id = groupBotMap[req.body.group_id];
