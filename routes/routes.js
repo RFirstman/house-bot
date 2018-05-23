@@ -14,15 +14,11 @@ const upload = multer({dest: "./"});
 module.exports = app => {
 	app.post("/", async (req, res) => {
 		let groupBotMap = config.bot_ids;
-		
+
 		if (groupBotMap.hasOwnProperty(req.body.group_id)) {
 			let bot_id = groupBotMap[req.body.group_id];
 
 			if (req.body.text.includes("@bot")) {
-				if (req.body.group_id && req.body.group_id === "33027326") {
-					bot_id = config.bot_id_old;
-				}
-	
 				await bot.respond(req.body.text, bot_id);
 			}
 		}
