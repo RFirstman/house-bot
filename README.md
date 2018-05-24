@@ -29,8 +29,7 @@ cd house-bot
 npm i
  ``` 
 
-Once you have your GroupMe bot created ([see the GroupMe developer page](https://dev.groupme.com/)
-), set the callback URL to `http://localhost:3000/`.
+Once you have your GroupMe bot created ([see the GroupMe developer page](https://dev.groupme.com/)), set the callback URL to `http://localhost:3000/`.
 
  Next, you will want to create a config file. Fill out this template 
  with your bot's ID and Group ID:
