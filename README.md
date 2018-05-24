@@ -23,9 +23,11 @@ weather
 
 First, clone this repository and install the relevant modules.
 
-`git clone https://github.com/RFirstman/house-bot
- cd house-bot
- npm i` 
+```
+git clone https://github.com/RFirstman/house-bot
+cd house-bot
+npm i
+ ``` 
 
 Once you have your GroupMe bot created ([see the GroupMe developer page]
 (https://dev.groupme.com/)), set the callback URL to 
@@ -34,10 +36,11 @@ Once you have your GroupMe bot created ([see the GroupMe developer page]
  Next, you will want to create a config file. Fill out this template 
  with your bot's ID and Group ID:
 
- ```module.exports = {
-	bot_ids: {
-		"your group id here": "your bot id here"
-	}
+ ```
+module.exports = {
+    bot_ids: {
+        "your group id here": "your bot id here"
+    }
 }
  ```
 
