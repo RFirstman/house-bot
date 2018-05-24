@@ -34,13 +34,12 @@ Once you have your GroupMe bot created ([see the GroupMe developer page]
  Next, you will want to create a config file. Fill out this template 
  with your bot's ID and Group ID:
 
- `
-module.exports = {
+ ```module.exports = {
 	bot_ids: {
 		"your group id here": "your bot id here"
 	}
 }
- `
+ ```
 
 Save this file as `config/dev.js`
 
