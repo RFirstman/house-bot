@@ -1,6 +1,6 @@
 const generateGreeting = require("./generateGreeting");
 const { brands, makes } = require("../data/cars");
-const checkForName = require("./checkForName");
+//const checkForName = require("./checkForName");
 const getWeather = require("./weather");
 const getWordOfTheDay = require("./wordOfTheDay");
 const menu = require("./menu");
@@ -45,7 +45,7 @@ module.exports = async (message) => {
     if (args.includes("insult")) {
         response += insult(args);
     }
-    response += checkForName(command);
+    //response += checkForName(command);
     response = response.replace("tenders", "tendies"); // just because
     return response;
 }
