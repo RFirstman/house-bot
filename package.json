@@ -11,6 +11,7 @@
   "author": "Robert Firstman",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.17.2",
     "curlrequest": "^1.0.1",
     "express": "^4.15.4",

@@ -2,6 +2,7 @@ const generateGreeting = require("./generateGreeting");
 const { brands, makes } = require("../data/cars");
 const checkForName = require("./checkForName");
 const getWeather = require("./weather");
+const getWordOfTheDay = require("./wordOfTheDay");
 const menu = require("./menu");
 const help = require("./help");
 const insult = require("./insult");
@@ -28,6 +29,13 @@ module.exports = async (message) => {
         try {
             response += await getWeather();
         } catch (err) {
+            console.log(err);
+        }
+    }
+    if (args.includes("wordoftheday")) {
+        try {
+            response += await getWordOfTheDay();
+        } catch(err) {
             console.log(err);
         }
     }
