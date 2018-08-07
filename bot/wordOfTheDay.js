@@ -6,7 +6,7 @@ module.exports = async () => {
             reject("Word of the day fetch timed out!");
         }, 10000);
 
-        let reponse = await getWordOfTheDay();
+        let response = await getWordOfTheDay();
         resolve(response);
     })
 }
