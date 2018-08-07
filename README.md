@@ -1,4 +1,4 @@
-# whose-car-bot
+# House Bot
 
 A GroupMe bot built to help and entertain my friends at our house.
 
