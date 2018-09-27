@@ -12,12 +12,14 @@ module.exports = async () => {
 				return;
 			}
 			let {
-				current: { temperature, feelslike, humidity, skytext }
+				current: { temperature, feelslike, humidity, skytext },
+				forecast
 			} = res[0];
+			let { precip } = forecast[1];
 			const response =
 				"\nIt is currently " + skytext.toLowerCase() + " out.\n" +
 				"Temp: " + temperature + "\xB0F, feels like " + feelslike + "\xB0\n" +
-				"Humidity: " + humidity + "%";
+				"Humidity: " + humidity + "%\n" + precip + "% chance of rain";
 			resolve(response);
 		});
 	});
